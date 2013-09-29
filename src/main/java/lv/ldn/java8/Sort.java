@@ -16,7 +16,7 @@ public class Sort {
     }
 
     public static void jdk8(List<String> list) {
-        Collections.sort(list, (s1, s2) -> s1.length() - s2.length());
+        Collections.sort(list, Comparator.comparing(String::length));
     }
 
 }
