@@ -8,7 +8,7 @@ public class Fetch {
     /**
      * @see java.util.Spliterator
      */
-    public static <K, V> List<V> jdk7(List<K> locations, Fetcher<K, V> fetcher) {
+    public static <K, V> List<V> jdk8(List<K> locations, Fetcher<K, V> fetcher) {
         return locations.parallelStream()
                 .map(fetcher::fetch)
                 .collect(Collectors.toList());
