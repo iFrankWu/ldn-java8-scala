@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <scala-version>2.11</scala-version>
-        <scala-full-version>2.11.0-M5</scala-full-version>
+        <scalaVersion>2.11</scalaVersion>
+        <scalaFullVersion>2.11.0-M5</scalaFullVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -34,12 +34,11 @@
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
-            <version>${scala-full-version}</version>
+            <version>${scalaFullVersion}</version>
         </dependency>
     </dependencies>
 
     <build>
-        <testSourceDirectory>src/test/scala</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -79,7 +78,7 @@
                 </executions>
 
                 <configuration>
-                    <scalaVersion>${scala-full-version}</scalaVersion>
+                    <scalaVersion>${scalaFullVersion}</scalaVersion>
                 </configuration>
             </plugin>
         </plugins>

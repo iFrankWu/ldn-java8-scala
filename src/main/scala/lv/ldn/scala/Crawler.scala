@@ -5,7 +5,7 @@ import concurrent.ExecutionContext.Implicits.global
 import concurrent.Future
 import language.postfixOps
 
-trait Crawler {
+abstract class Crawler {
   def download(url: URL): String
 
   def findLinks(html: String): List[URL]
