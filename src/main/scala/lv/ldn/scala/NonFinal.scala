@@ -1,5 +1,7 @@
 package lv.ldn.scala
 
+import java.util.concurrent.atomic.LongAdder
+
 object NonFinal {
   def mutable {
     var count = 0
@@ -8,7 +10,7 @@ object NonFinal {
   }
 
   def atomic {
-    val count = new java.util.concurrent.atomic.LongAdder
+    val count = new LongAdder
     val strings = Seq("a", "b", "c")
     strings.foreach(s => count.increment())
   }
